@@ -1,11 +1,12 @@
 <div class="content">
-    <form [formGroup]="formRegister" (submit)="onSubmit()">
+    
     <div class="row">
         <div class="col-md-12">
+            <label>Buscar</label>
             <div class="box-body">
                 <div class="form-group">
                     <div class="input-group">
-                        <label>Buscar</label>
+                      
                         <input class="form-control" [(ngModel)]="persona.identificacion">
                         <button class="bt btn-primary" (click)="get()" >Buscar</button>
                     </div>                  
@@ -80,7 +81,7 @@
         
         <div class="col-md-12">
             <h2 style="text-align: center;">Registro de Estudiante</h2>
-           
+            <form [formGroup]="formRegister" (submit)="onSubmit()">
             <div class="box-group">
                 <div class="form-group">
                     <label for="sexo">Tipo De Documento:</label>
@@ -128,7 +129,7 @@
                   </div>
                   <div class="form-group">
                     <label for="nombreAcudiente">nombreAcudiente:</label>
-                    <input formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreAcudiente.errors}" name="nombreAcudiente" type="text" placeholder="nombreAcudiente">
+                    <input formControlName="nombreAcudiente" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreAcudiente.errors}" name="nombreAcudiente" type="text" placeholder="nombreAcudiente">
                     <div *ngIf="submitted && f.nombreAcudiente.errors"  class="invalid-feedback">
                       <div *ngIf="f.nombreAcudiente.errors.required">
                         nombre De Acudiente obligatorio
@@ -138,6 +139,7 @@
                 
             </div>
             
+            </form>
          
         </div>
         <div class="col-md-6">
@@ -149,5 +151,5 @@
         
         
     </div>
-   </form>
+  
 </div>

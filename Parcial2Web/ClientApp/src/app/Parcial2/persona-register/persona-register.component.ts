@@ -15,13 +15,10 @@ export class PersonaRegisterComponent implements OnInit {
   formRegister: FormGroup;
   submitted = false;
   persona : Persona;
-  vacunaBus:Vacunas;
-  vacuna: Vacunas;
   constructor(private service:PersonaService,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.persona = new Persona;
-    this.vacuna = new Vacunas;
     this.buildForm();
 
   }
