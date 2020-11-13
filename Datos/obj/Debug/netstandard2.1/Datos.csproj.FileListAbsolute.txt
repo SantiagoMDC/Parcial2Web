@@ -1,0 +1,12 @@
+c:\Users\HP\Documents\Parcial2Web\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+c:\Users\HP\Documents\Parcial2Web\Datos\bin\Debug\netstandard2.1\Datos.dll
+c:\Users\HP\Documents\Parcial2Web\Datos\bin\Debug\netstandard2.1\Datos.pdb
+c:\Users\HP\Documents\Parcial2Web\Datos\bin\Debug\netstandard2.1\Entity.dll
+c:\Users\HP\Documents\Parcial2Web\Datos\bin\Debug\netstandard2.1\Entity.pdb
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.dll
+c:\Users\HP\Documents\Parcial2Web\Datos\obj\Debug\netstandard2.1\Datos.pdb

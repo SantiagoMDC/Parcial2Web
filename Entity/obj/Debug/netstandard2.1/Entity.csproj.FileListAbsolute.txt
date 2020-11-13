@@ -1,0 +1,9 @@
+c:\Users\HP\Documents\Parcial2Web\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+c:\Users\HP\Documents\Parcial2Web\Entity\bin\Debug\netstandard2.1\Entity.dll
+c:\Users\HP\Documents\Parcial2Web\Entity\bin\Debug\netstandard2.1\Entity.pdb
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.csproj.CoreCompileInputs.cache
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.dll
+c:\Users\HP\Documents\Parcial2Web\Entity\obj\Debug\netstandard2.1\Entity.pdb

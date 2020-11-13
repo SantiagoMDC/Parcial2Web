@@ -1,0 +1,46 @@
+<section class="content">
+    <h1>CONSULTAS</h1>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <input class="form-control" [(ngModel)]="searchText" name="searchText" placeholder="FILTRAR">
+            </div>
+            <div class="col-md-12">
+
+            </div>
+        </div>    
+        <table class="table table-striped" *ngIf='vacunas && vacunas.length'> 
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tipo de Documento</th>
+                    <th scope="col">Identificacion</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Institucion Educativa</th>
+                    <th scope="col">Nombre de Acudiente</th>
+                    <th scope="col">Nombre de Vacuna</th>
+                    <th scope="col">Fecha de Vacuna</th>
+                    <th scope="col">Edad de vacuna</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vacunas of vacunas|filtroPersona:searchText; index as i">
+                    <th scope="row">{{ i + 1}}</th>
+                    <td>{{vacunas.tipoDeDocumentov}}</td>
+                    <td>{{vacunas.identificacionv}}</td>
+                    <td>{{vacunas.nombrev}}</td>
+                    <td>{{vacunas.fechaDeNacimientov}}</td> 
+                    <td>{{vacunas.institucionEducativav}}</td>
+                    <td>{{vacunas.nombreDeAcudientev}}</td>
+                    <td>{{vacunas.nombreVacuna}}</td>
+                    <td>{{vacunas.fechaVacuna}}</td>
+                    <td>{{vacunas.edadVacuna}}</td>
+
+                </tr>
+            </tbody>
+            
+        </table>
+        
+    </section>
+    
