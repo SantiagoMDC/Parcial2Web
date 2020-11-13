@@ -11,17 +11,25 @@ import { VacunaService } from 'src/app/services/vacuna.service';
 export class PersonaConsultaComponent implements OnInit {
 
   vacunas:Vacunas[];
-  Total :Number = 0;
+  Total :Number;
   searchText = "";
   searchText1 = "";
   constructor(private service:VacunaService) { }
 
   ngOnInit(): void {
     this.get();
+    this.Totale();
+    this.Total
   }
   get(){
     this.service.Consultar().subscribe(result => {
       this.vacunas = result;
     });
+
   }
+  Totale(){
+    this.Total = this.service.calcularTotal();
+
+  }
+  
 }

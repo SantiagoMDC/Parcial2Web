@@ -34,4 +34,14 @@ export class VacunaService {
       catchError(this.handleErrorService.handleError<Vacunas>('Consulta identificacion', null))
     );
   }
+
+  calcularTotal():number{
+    let total :number;
+    total = 0;
+
+    this.Consultar().forEach(element => {
+      total   =  element.length + 1
+    });
+    return total;
+  }
 }

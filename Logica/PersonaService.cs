@@ -60,5 +60,11 @@ namespace Logica
             return personas;
         }
 
+        public Persona BuscarxIdentificacion(string identificacion)
+        {
+            Persona persona = _context.personas.Find(identificacion);
+            return persona;
+        }
+
     }
 }

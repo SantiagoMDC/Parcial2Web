@@ -1,1 +1,155 @@
-<p>persona-register works!</p>
+<div class="content">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box-body">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label>Buscar</label>
+                        <input class="form-control" [(ngModel)]="persona.identificacion">
+                        <button class="bt btn-primary" (click)="get()" >Buscar</button>
+                    </div>                  
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-6">
+            <h2 style="text-align: center;">Registro de Estudiante</h2>
+            <form [formGroup]="formRegister" (submit)="onSubmit()">
+            <div class="box-group">
+                <div class="form-group">
+                    <label for="sexo">Tipo De Documento:</label>
+                    <select formControlName="tipoDeDocumento" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tipoDeDocumento.errors}" name="tipoDeDocumento">
+                      <option value="RC">RC</option>
+                      <option value="TI">TI</option>
+                    </select>
+                    <div *ngIf="submitted && f.tipoDeDocumento.errors"  class="invalid-feedback">
+                      <div *ngIf="f.tipoDeDocumento.errors.required">
+                        Tipo de Documento obligatorio
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-group">
+                    <label for="identificacion">Identificacion:</label>
+                    <input formControlName="identificacion" class="form-control" [ngClass]="{ 'is-invalid':submitted && f.identificacion.errors}" type="text" placeholder="Identificacion" name="identificacion">
+                    <div *ngIf="submitted && f.identificacion.errors" class="invalid-feedback">
+                      <div *ngIf="f.identificacion.errors.required">
+                        identificacion obligatoria
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors}" name="nombre" type="text" placeholder="Nombre">
+                    <div *ngIf="submitted && f.nombre.errors"  class="invalid-feedback">
+                      <div *ngIf="f.nombre.errors.required">
+                        Nombre es obligatorio
+                      </div>
+                    </div>
+                  </div>
+                
+                <div class="form-group">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" name="fechaDeNacimiento" class ="form-control" [(ngClass)]="persona.fechaDeNacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="institucionEducativa">institucionEducativa:</label>
+                    <input formControlName="institucionEducativa" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.institucionEducativa.errors}" name="institucionEducativa" type="text" placeholder="institucionEducativa">
+                    <div *ngIf="submitted && f.institucionEducativa.errors"  class="invalid-feedback">
+                      <div *ngIf="f.institucionEducativa.errors.required">
+                        Nombre de institucion Educativa obligatorio
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="nombreAcudiente">nombreAcudiente:</label>
+                    <input formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreAcudiente.errors}" name="nombreAcudiente" type="text" placeholder="nombreAcudiente">
+                    <div *ngIf="submitted && f.nombreAcudiente.errors"  class="invalid-feedback">
+                      <div *ngIf="f.nombreAcudiente.errors.required">
+                        nombre De Acudiente obligatorio
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary form-control" type="submit">Registrar</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-danger form-control">Cancelar</button>
+            </div>
+         </form>
+        </div>
+        
+
+        <div class="col-md-6">
+            <h2 style="text-align: center;">Registro de Vacuna</h2>
+            <div class="box-group">
+                <div class="form-group">
+                    <label>Tipo de documento</label>
+                    <select disabled name="tipoDeDocumento" class ="form-control" [(ngModel)]="persona.tipoDeDocumento">
+                        <option value="RC">RC</option>
+                        <option value="TI">TI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input disabled name="identificacion" class ="form-control" [(ngModel)]="persona.identificacion">
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input disabled name="nombre" class ="form-control" [(ngModel)]="persona.nombre">
+                </div>
+                
+                <div class="form-group">
+                    <label>Fecha de nacimiento</label>
+                    <input disabled type="date" name="fechaDeNacimiento" class ="form-control" [(ngModel)]="persona.fechaDeNacimiento">
+                </div>
+                <div class="form-group">
+                    <label>Institucion educativa</label>
+                    <input disabled name="institucionEducativa" class ="form-control" [(ngModel)]="persona.institucionEducativa">
+                </div>
+                <div class="form-group">
+                    <label>Nombre de acudiente</label>
+                    <input disabled name="nombreDeAcudiente" class ="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>Nombre de Vacuna</label>
+                    <select disabled name="nombreDeVacuna" class ="form-control" [(ngModel)]="vacunas.nombreVacuna">
+                        <option value="Haemophilus influenza tipo B,">Haemophilus influenza tipo B</option>
+                        <option value="Tdpa">Tdpa</option>
+                        <option value="DTPa">DTPa</option>
+                        <option value="Hepatitis A">Hepatitis A</option>
+                        <option value="Hepatitis B">Hepatitis B</option>
+                        <option value=" virus del
+                        papiloma Humano"> virus del
+                            papiloma Humano</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de vacuna</label>
+                    <input disabled type="date" name="fechaDeVacuna" class="form-control" [(ngModel)]="vacunas.fechaDeVacuna">
+                </div>
+                <div class="form-group">
+                    <label>Edad de vacuna</label>
+                    <input disabled name="edadDeVacuna" class ="form-control" [(ngModel)]="vacunas.edadDeVacuna">
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-primary form-control" (click)="add()">Registrar</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-danger form-control">Cancelar</button>
+                </div>
+
+
+                
+                
+            </div>
+        </div>
+
+        
+        
+        
+        
+    </div>
+   
+</div>

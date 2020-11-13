@@ -2,7 +2,7 @@ export class Persona {
     tipoDeDocumento:string;
     identificacion:string;
     nombre:string;
-    fechaDeNacimineto:Date;
+    fechaDeNacimiento:Date;
     institucionEducativa:string;
-    nombreDeAcudiente:string;
+    nombreAcudiente:string;
 }

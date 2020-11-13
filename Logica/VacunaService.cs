@@ -59,6 +59,10 @@ namespace Logica
            
             return vacunas;
         }
+        public int CantidadTotal(){
+            List<Vacuna> vacunas = ConsultarTodos();
+            return vacunas.Count();
+        }
 
     }
 }
