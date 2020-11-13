@@ -1,5 +1,5 @@
 <div class="content">
-    
+    <form [formGroup]="formRegister" (submit)="onSubmit()">
     <div class="row">
         <div class="col-md-12">
             <div class="box-body">
@@ -12,9 +12,75 @@
                 </div>
             </div>
         </div> 
+
+        <div class="col-md-12">
+            <h2 style="text-align: center;">Registro de Vacuna</h2>
+            <div class="box-group">
+                <div class="form-group">
+                    <label>Tipo de documento</label>
+                    <select disabled name="tipoDeDocumento" class ="form-control" [(ngModel)]="persona.tipoDeDocumento">
+                        <option value="RC">RC</option>
+                        <option value="TI">TI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input disabled name="identificacion" class ="form-control" [(ngModel)]="persona.identificacion">
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input disabled name="nombre" class ="form-control" [(ngModel)]="persona.nombre">
+                </div>
+                
+                <div class="form-group">
+                    <label>Fecha de nacimiento</label>
+                    <input disabled type="date" name="fechaDeNacimiento" class ="form-control" [(ngModel)]="persona.fechaDeNacimiento">
+                </div>
+                <div class="form-group">
+                    <label>Institucion educativa</label>
+                    <input disabled name="institucionEducativa" class ="form-control" [(ngModel)]="persona.institucionEducativa">
+                </div>
+                <div class="form-group">
+                    <label>Nombre de acudiente</label>
+                    <input disabled name="nombreDeAcudiente" class ="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>Nombre de Vacuna</label>
+                    <select disabled name="nombreDeVacuna" class ="form-control" [(ngModel)]="vacunas.nombreVacuna">
+                        <option value="Haemophilus influenza tipo B,">Haemophilus influenza tipo B</option>
+                        <option value="Tdpa">Tdpa</option>
+                        <option value="DTPa">DTPa</option>
+                        <option value="Hepatitis A">Hepatitis A</option>
+                        <option value="Hepatitis B">Hepatitis B</option>
+                        <option value=" virus del
+                        papiloma Humano"> virus del
+                            papiloma Humano</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de vacuna</label>
+                    <input disabled type="date" name="fechaDeVacuna" class="form-control" [(ngModel)]="vacunas.fechaDeVacuna">
+                </div>
+                <div class="form-group">
+                    <label>Edad de vacuna</label>
+                    <input disabled name="edadDeVacuna" class ="form-control" [(ngModel)]="vacunas.edadDeVacuna">
+                </div>
+                
+                
+            </div>
+        </div>
         <div class="col-md-6">
+            <button class="btn btn-primary form-control" (click)="add()">Registrar</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-danger form-control">Cancelar</button>
+        </div>
+
+        
+        
+        <div class="col-md-12">
             <h2 style="text-align: center;">Registro de Estudiante</h2>
-            <form [formGroup]="formRegister" (submit)="onSubmit()">
+           
             <div class="box-group">
                 <div class="form-group">
                     <label for="sexo">Tipo De Documento:</label>
@@ -71,85 +137,17 @@
                   </div>
                 
             </div>
-            <div class="col-md-6">
-                <button class="btn btn-primary form-control" type="submit">Registrar</button>
-            </div>
-            <div class="col-md-6">
-                <button class="btn btn-danger form-control">Cancelar</button>
-            </div>
-         </form>
+            
+         
         </div>
-        
-
         <div class="col-md-6">
-            <h2 style="text-align: center;">Registro de Vacuna</h2>
-            <div class="box-group">
-                <div class="form-group">
-                    <label>Tipo de documento</label>
-                    <select disabled name="tipoDeDocumento" class ="form-control" [(ngModel)]="persona.tipoDeDocumento">
-                        <option value="RC">RC</option>
-                        <option value="TI">TI</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Identificacion</label>
-                    <input disabled name="identificacion" class ="form-control" [(ngModel)]="persona.identificacion">
-                </div>
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input disabled name="nombre" class ="form-control" [(ngModel)]="persona.nombre">
-                </div>
-                
-                <div class="form-group">
-                    <label>Fecha de nacimiento</label>
-                    <input disabled type="date" name="fechaDeNacimiento" class ="form-control" [(ngModel)]="persona.fechaDeNacimiento">
-                </div>
-                <div class="form-group">
-                    <label>Institucion educativa</label>
-                    <input disabled name="institucionEducativa" class ="form-control" [(ngModel)]="persona.institucionEducativa">
-                </div>
-                <div class="form-group">
-                    <label>Nombre de acudiente</label>
-                    <input disabled name="nombreDeAcudiente" class ="form-control" >
-                </div>
-                <div class="form-group">
-                    <label>Nombre de Vacuna</label>
-                    <select disabled name="nombreDeVacuna" class ="form-control" [(ngModel)]="vacunas.nombreVacuna">
-                        <option value="Haemophilus influenza tipo B,">Haemophilus influenza tipo B</option>
-                        <option value="Tdpa">Tdpa</option>
-                        <option value="DTPa">DTPa</option>
-                        <option value="Hepatitis A">Hepatitis A</option>
-                        <option value="Hepatitis B">Hepatitis B</option>
-                        <option value=" virus del
-                        papiloma Humano"> virus del
-                            papiloma Humano</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Fecha de vacuna</label>
-                    <input disabled type="date" name="fechaDeVacuna" class="form-control" [(ngModel)]="vacunas.fechaDeVacuna">
-                </div>
-                <div class="form-group">
-                    <label>Edad de vacuna</label>
-                    <input disabled name="edadDeVacuna" class ="form-control" [(ngModel)]="vacunas.edadDeVacuna">
-                </div>
-                <div class="col-md-6">
-                    <button class="btn btn-primary form-control" (click)="add()">Registrar</button>
-                </div>
-                <div class="col-md-6">
-                    <button class="btn btn-danger form-control">Cancelar</button>
-                </div>
-
-
-                
-                
-            </div>
+            <button class="btn btn-primary form-control" type="submit">Registrar</button>
         </div>
-
-        
-        
+        <div class="col-md-6">
+            <button class="btn btn-danger form-control">Cancelar</button>
+        </div>
         
         
     </div>
-   
+   </form>
 </div>
